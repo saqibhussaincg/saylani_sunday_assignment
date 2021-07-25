@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> constructor function </title>
+</head>
+
+<body>
+    <script>
+
+        function Data(name, age, rollno, city, country, phone) {
+            this.name = name;
+            this.age = age;
+            this.rollno = rollno;
+            this.city = city;
+            this.country = country;
+        }
+        var record1 = new Data('Saqib', '20', '16871', 'Karachi', 'Pakistan', '+92 000 00');
+        var record2 = new Data('Mohsin', '22', '16871', 'Karachi', 'Pakistan', '+92 000 00');
+        var record3 = new Data('Waseem', '24', '16871', 'Karachi', 'Pakistan', '+92 000 00');
+
+        console.log(record1);
+        console.log(record2);
+        console.log(record3);
+
+    </script>
+</body>
+
+</html>

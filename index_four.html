@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> check population </title>
+</head>
+
+<body>
+    <form action="index_four.html" class="">
+        <!-- name start -->
+        <input id="name" type="text" name="username"  placeholder="Enter Your Name"> 
+         <!-- name end -->
+
+        <br><br> <!-- Spacing For Line -->
+
+         <!-- gender start -->
+        <input value="male" type="radio" name="flexRadioDefault" id="male">
+        <label for="male">Male</label>
+
+        <input value="female" type="radio" name="flexRadioDefault" id="female">
+        <label for="female">Female</label>
+         <!-- gender end -->
+
+        <br><br> <!-- Spacing For Line --> 
+
+         <!-- address start -->
+        <input id="address" type="text" id="address" placeholder="Enter your address">
+         <!-- address end -->
+
+        <br><br> <!-- Spacing For Line -->
+
+         <!-- education section start -->
+        <select id="education">
+            <option value="education">Education</option>
+            <option value="matric">Matric</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="computer sciene">Computer Sceince</option>
+            <option value="mba">MBA</option>
+        </select>
+         <!-- education section end -->
+
+        <br><br>  <!-- Spacing For Line -->
+
+        <!-- profession section start -->
+        <select id="profession">
+            <option value="">Profession</option>
+            <option value="designer">Designer</option>
+            <option value="developer">Developer</option>
+            <option value="database">Database Developer</option>
+            <option value="uiux">ui ux designer</option>
+        </select>
+        <!-- profession section end -->
+
+        <br><br> <!-- Spacing For Line -->
+
+        <button onclick="myfun()" type="button">Submit</button>
+    </form>
+
+    <script>
+
+function Data(name, gender, address, education, profession) {
+    this.name = name;
+    this.gender = gender;
+    this.address = address;
+    this.education = education;
+    this.profession = profession;
+}
+
+function myfun() {
+    var myName = document.getElementById("name").value;
+    var address = document.getElementById("address").value;
+    var education = document.getElementById("education").value;
+    var profession = document.getElementById("profession").value;
+
+    if ((myName.length && address.length && education.length && profession.length) == 0) {
+        console.log("Please Fill The Form");
+    } else {
+        var gender1 = document.getElementById("male");
+        var gender2 = document.getElementById("female");
+
+        if (gender1.checked) {
+            var checkgender = "male";
+        } else if (gender2.checked) {
+            var  checkgender = "female";
+        }
+
+        const myArea = new Data(myName,  checkgender, address, education, profession);
+        console.log(myArea);
+    }
+}
+    </script>
+</body>
+
+</html>
